@@ -20,6 +20,6 @@ app.post('/', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Api rodando - http://localhost:${port}`)
+    console.log(`Api rodando - https://api-xss-test.herokuapp.com:${port}`)
 })
 
