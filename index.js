@@ -7,6 +7,7 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
+const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
 app.post('/', (req, res) => {
@@ -19,7 +20,7 @@ app.post('/', (req, res) => {
 })
 
 
-app.listen(port, () => {
-    console.log(`Api rodando - https://api-xss-test.herokuapp.com:${port}`)
+app.listen(port, host, () => {
+    console.log(`Api rodando - ${host}:${port}`);
 })
 
